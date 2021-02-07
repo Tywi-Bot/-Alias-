@@ -1,92 +1,29 @@
-client.on('message', message => {
-    if(message.content.startsWith("/amuseu")) {
-const amusEu = new Discord.MessageEmbed()
-1);
-	.setColor('#FFFF00')
-	.setTitle(“Nouvelle Partie D’among Us“)
-	.setURL(“https://store.steampowered.com/app/945360/Among_Us/“)
-
-let argsss = message.content.split(" ").slice(
-
-	.setAuthor(message.author, message.author.displayavatarurl)
-	.setThumbnail('https://cdn.discordapp.com/attachments/780022857328885782/798254674738282586/image0.png')
-	.addFields(
-		{ name: '\u200B', value: '\u200B' },
-		{ name: '🌎 | Région', value: 'Europe', inline: true },
-		{ name: '👑 | Créateur', value: 'Le créateur est', message.author, inline: true },
-	)
-	.addField('❌ | Code', ˋLe code est ${argsss[0]}`, true)
-	.setImage('https://cdn.discordapp.com/attachments/780022857328885782/798254680064262184/image0.jpg')
-	.setTimestamp()
-	.setFooter('Cette game à était créer le ', 'https://cdn.discordapp.com/attachments/780022857328885782/798254674738282586/image0.png');
-
-client.channels.get('769462979854073887').send("<@&755073926127812608>", amusEu);
-
-client.on('message', message => {
-    if(message.content.startsWith("/amusan
-")) {
-const amusEu = new Discord.MessageEmbed()
-1);
-	.setColor('#FFFF00')
-	.setTitle(“Nouvelle Partie D’among Us“)
-	.setURL(“https://store.steampowered.com/app/945360/Among_Us/“)
-
-let argssss = message.content.split(" ").slice(
-
-	.setAuthor(message.author, message.author.displayavatarurl)
-	.setThumbnail('https://cdn.discordapp.com/attachments/780022857328885782/798254674738282586/image0.png')
-	.addFields(
-		{ name: '\u200B', value: '\u200B' },
-		{ name: '🌎 | Région', value: 'North America', inline: true },
-		{ name: '👑 | Créateur', value: 'Le créateur est', message.author, inline: true },
-	)
-	.addField('❌ | Code', ˋLe code est ${argssss[0]}`, true)
-	.setImage('https://cdn.discordapp.com/attachments/780022857328885782/798254680064262184/image0.jpg')
-	.setTimestamp()
-	.setFooter('Cette game à était créer le ', 'https://cdn.discordapp.com/attachments/780022857328885782/798254674738282586/image0.png');
-
-client.channels.get('769462979854073887').send("<@&755073926127812608>", amusEu);
+> <a:unnamed:807488728099586078>` Version Française / French Version`
+> 
+> **:palm_tree:/!Tu habite dans l'océan Indien !\ :palm_tree: 
+> <a:partydinosaur:766196305562697729>| Comment Vas-Tu ? | <a:partyfrog:766196301893074945> 
+> <a:771833258505666570:772870005468692511> /\ Je T'invite Aujourd'hui sur le Serveur OI | Faction /\ <a:771833258505666570:772870005468692511> 
+> <a:772152908329910302:772870009096765521> !< Si tu joue à fortnite, nous organisons des tournoi, scrims pour participer {
+> __<a:762388950966861845:772870005212577802> ! Rejoin le serveur
+> <a:762388950966861845:772870005212577802> ! Envoie une image prouvant que tu à 200Ping dans le salon #│「🔖」│𝐯𝐞𝐫𝐢𝐟-𝐩𝐢𝐧𝐠__
+> <a:HandBoostCrystal_DA:766792548680728666> !> Si tu joue à d'autre jeux n'hesite pas à en parler avec nous :slight_smile:
+> 
+> :tickets:<:arrow_DA:794152039847690241> Le Discord : ** https://discord.gg/dZtQRUdkZA
+> 
+> <a:200087_483d4:807488748937150475>`English Version / Version anglaise`
+> 
+> **:palm_tree:/!You live in the indian ocean!\ :palm_tree: 
+> <a:partydinosaur:766196305562697729>| How are you ? | <a:partyfrog:766196301893074945> 
+> <a:771833258505666570:772870005468692511> /\ I Invite You Today on the OI | Faction Server  /\ <a:771833258505666570:772870005468692511> 
+> <a:772152908329910302:772870009096765521> !< If you play fortnite, we organize tournaments, scrims to participate {
+> __<a:762388950966861845:772870005212577802> ! Join the server
+> <a:762388950966861845:772870005212577802> ! Ping check in the channels #│「🔖」│𝐯𝐞𝐫𝐢𝐟-𝐩𝐢𝐧𝐠__
+> <a:HandBoostCrystal_DA:766792548680728666> !> If you play other games, don't hesitate to talk to us :slight_smile: 
+> 
+> :tickets:<:arrow_DA:794152039847690241> The Discord : ** https://discord.gg/dZtQRUdkZA
 
 
-Bot.on("message", async message => {
-  if(command === "/mute"){
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("❌ | Vous n'avez pas les droits pour muter un utilisateur !");
-
-    let toMute = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
-    if(!toMute) return message.channel.send("❓| Merci d'entrer un utilisateur !");
-    let role = message.guild.roles.find(r => r.name === "Utilisateurs mutés");
-    if(!role){
-      try {
-        role = await message.guild.createRole({
-          name: "Utilisateurs mutés",
-          color:"#000000",
-          permissions:[]
-        });
-
-        message.guild.channels.forEach(async (channel, id) => {
-          await channel.overwritePermissions(role, {
-            SEND_MESSAGES: false,
-            ADD_REACTIONS: false
-          });
-        });
-      } catch (e) {
-        console.log(e.stack)
-      }
-    }
-
-    if(toMute.roles.has(role.id)) return message.channel.send('Cet utilisateur est déjà muté !');
-
-    await(toMute.addRole(role));
-    message.channel.send("Je l'ai muté !");
-
-    return;
-  }
-
-});
 
 
-bot.on("guildMemberAdd", async member => {      
-let user = member;     
-const canvas = Canvas.createCanvas(700, 250);     
-const ctx = canvas.getContext(`2d`);      const background = await 
-Canvas.loadImage(`./wallpaper.jpg`);     ctx.drawImage(background, 0, 0, canvas.width, canvas.height);      ctx.font = `40px Calvert MT Std`;     ctx.fillStyle = `#ffffff`;      ctx.fillText(user.user.username, canvas.width / 2.2, canvas.height / 1.7);     ctx.fillText((user.user.bot ? '🤖' : '🙎‍♂️'), canvas.width / 1.1, canvas.height / 4.2)     ctx.fillText((moment(user.user.createdAt).format('DD/MM/YYYY')), canvas.width / 1.5, canvas.height / 1.05)      ctx.beginPath();     ctx.arc(125, 125, 100, 0, Math.PI * 2, true);     ctx.closePath();     ctx.clip();     const avatar = await Canvas.loadImage(user.user.displayAvatarURL({ format: 'png' }))     ctx.drawImage(avatar, 25, 25, 200, 200);      const attachment = new Discord.MessageAttachment(canvas.toBuffer(), './Welcome.jpg');       bot.channels.cache.get('781609852748169256').send(attachment); })
+
+
